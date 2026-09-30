@@ -8,14 +8,14 @@ This application lets you generate integer input files of varying size and order
 
 ## Project Structure
 
-| File | Purpose |
-|------|---------|
-| `main.py` | Entry point and menu-driven interface |
-| `sorting_algorithm.py` | Sorting algorithm implementations |
-| `input_generator.py` | Input file generation |
+| File                   | Purpose                                                 |
+|------------------------|---------------------------------------------------------|
+| `main.py`              | Entry point and menu-driven interface                   |
+| `sorting_algorithm.py` | Sorting algorithm implementations                       |
+| `input_generator.py`   | Input file generation                                   |
 | `experiment_runner.py` | Runs algorithms and records timing and operation counts |
-| `result_reporter.py` | Writes results to CSV |
-| `sort_result.py` | Dataclass holding the result of a single run |
+| `result_reporter.py`   | Writes results to CSV                                   |
+| `sort_result.py`       | Dataclass holding the result of a single run            |
 
 ## Getting Started
 
@@ -31,12 +31,12 @@ The application will present a menu. Generate an input file first, then run expe
 
 The generator produces files containing integers in one of four orderings:
 
-| Ordering | Description |
-|----------|-------------|
-| `random` | Integers in a random order |
-| `sorted` | Integers in ascending order |
-| `reverse` | Integers in descending order |
-| `nearlysorted` | Sorted with approximately 5% of elements randomly displaced |
+| Ordering      | Description                                                 |
+|---------------|-------------------------------------------------------------|
+| `random`      | Integers in a random order                                  |
+| `sorted`      | Integers in ascending order                                 |
+| `reverse`     | Integers in descending order                                |
+| `nearlysorted`| Sorted with approximately 5% of elements randomly displaced |
 
 Generated files are plain text with one integer per line.
 
@@ -48,14 +48,14 @@ Select a previously generated input file, specify its ordering type, and choose 
 
 Results are written to CSV with the following columns:
 
-| Column | Description |
-|--------|-------------|
-| `Algorithm` | Algorithm name |
-| `InputSize` | Number of integers in the input |
-| `OrderingType` | Ordering of the input |
-| `RunNumber` | Run index for this algorithm and input |
-| `ElapsedMilliseconds` | Wall clock time for the sort |
-| `OperationCount` | Number of comparisons performed |
+| Column                | Description                            |
+|-----------------------|----------------------------------------|
+| `Algorithm`           | Algorithm name                         |
+| `InputSize`           | Number of integers in the input        |
+| `OrderingType`        | Ordering of the input                  |
+| `RunNumber`           | Run index for this algorithm and input |
+| `ElapsedMilliseconds` | Wall clock time for the sort           |
+| `OperationCount`      | Number of comparisons performed        |
 
 ## Operation Counting
 

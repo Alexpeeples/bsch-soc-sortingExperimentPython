@@ -63,6 +63,62 @@ def _merge(left: list[int], right: list[int], operation_count: int) -> tuple[lis
 
 
 # --- Add your algorithms below this line ---
+
+def bubble_sort(array: list[int]) -> tuple[list[int], int]:
+    arr = array[:] #New copy of the dataset
+    operation_count = 0
+    
+    n = len(arr) #size of the array
+    for i in range(n - 1): # keep looping through the array until the end is reached
+        swapped = False # no items will be swapped within the first loop
+        for j in range(n - i - 1): #loop through each comparable numbers left in the array
+            operation_count += 1 # add 1 after each operation
+            if arr[j] > arr[j + 1]: #if first comparable no is bigger than the on next to it
+                arr[j], arr[j + 1] = arr[j+1], arr[j] # swap the numbers
+                swapped = True #the numbers swapped
+        if not swapped:
+            break
+    return arr, operation_count #return the sorted array and the number of operations (no of times the numbers were compared and swapped)
+
+def insertion_sort(array: list[int]) -> tuple[list[int], int]:
+    arr = array[:] #New copy of the dataset
+    operation_count = 0
+
+    n = len(arr) #size of the array
+    for i in range(1,n): #keep looping the array from 1 -> n - 1 
+        insert_index = i #the index we currently want to compare to the current value
+        current_value = arr[i] #the current value we are comparing against
+        for j in range(i - 1, -1, -1): #start at i - 1, step -1 and stop -1
+            operation_count += 1 # add 1 after each operation
+
+            if arr[j] > current_value: #if value one to the left is bigger then swap them
+                arr[j + 1] = arr[j]
+                insert_index = j
+            else:
+                break
+        arr[insert_index] = current_value
+
+    return arr, operation_count #return the sorted array and the number of operations (no of times the numbers were compared and swapped)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Follow the same pattern as merge_sort above.
 # Each algorithm should accept a list[int] and return tuple[list[int], int].
 #

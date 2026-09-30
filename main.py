@@ -9,6 +9,8 @@ from input_generator import generate
 from experiment_runner import run_experiment
 from result_reporter import write_results
 from sorting_algorithm import merge_sort
+from sorting_algorithm import bubble_sort
+from sorting_algorithm import insertion_sort
 
 # --- Import your algorithms here once implemented ---
 # from sorting_algorithm import bubble_sort, insertion_sort
@@ -52,6 +54,16 @@ def handle_run() -> None:
     write_results(results, results_file)
 
     # --- Add your algorithms below this line ---
+
+    #--- Bubble Sort ---
+    print("running Bubble Sort...")
+    results = run_experiment("BubbleSort", bubble_sort, input_file, ordering, runs)
+    write_results(results, results_file)
+    #--- Insertion Sort ---
+    print("Running Insertion Sort...")
+    results = run_experiment("InsertionSort", insertion_sort, input_file, ordering, runs)
+    write_results(results, results_file)
+
     # Follow the same pattern as MergeSort above.
     # Example structure (do not uncomment, implement your own):
     #
