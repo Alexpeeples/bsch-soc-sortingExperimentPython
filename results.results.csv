@@ -1,0 +1,6 @@
+Algorithm,InputSize,OrderingType,RunNumber,ElapsedMilliseconds,OperationCount
+MergeSort,100000,reverse,1,157.4893,853904
+MergeSort,100000,reverse,2,128.4420,853904
+MergeSort,100000,reverse,3,122.8895,853904
+MergeSort,100000,reverse,4,134.7807,853904
+MergeSort,100000,reverse,5,127.6324,853904

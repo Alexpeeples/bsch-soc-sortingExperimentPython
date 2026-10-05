@@ -76,8 +76,8 @@ def bubble_sort(array: list[int]) -> tuple[list[int], int]:
             if arr[j] > arr[j + 1]: #if first comparable no is bigger than the on next to it
                 arr[j], arr[j + 1] = arr[j+1], arr[j] # swap the numbers
                 swapped = True #the numbers swapped
-        if not swapped:
-            break
+            if not swapped:
+                break
     return arr, operation_count #return the sorted array and the number of operations (no of times the numbers were compared and swapped)
 
 def insertion_sort(array: list[int]) -> tuple[list[int], int]:
